@@ -19,7 +19,7 @@ func main() {
     )
 	defer cancel() //important
 
-	g.AddFunc(func() error {
+	g.Add(func() error {
 		return errors.New("Pew Pew")
 	})
 
