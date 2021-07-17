@@ -14,7 +14,7 @@ import (
 
 func main() {
 	g, _, cancel := grashud.New(
-        grashud.WithCancel, //can be WithCancel, WithDeadline, WithTimeout
+        grashud.WithCancel, //must be WithCancel, WithDeadline, WithTimeout
         nil, //must be nil for WithCancel, time.Time for WithDeadline, time.Duration for WithTimeout
     )
 	defer cancel() //important
